@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="data-box" class="banner_main">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="text-bg10">
+                <figure><img src="{% static 'images/logo2bg.png' %}" /></figure>
+             </div>
+          </div>
+       </div>            
+    </div>
+    <div class="container-md c1">
+        {% include 'partials/_alerts.html' %}
+       <h2>Tap on capture to take your snap</h2>
+       <br>
+       <form method="POST" action="{% url 'mobileUP' %}" enctype="multipart/form-data">
+        {% csrf_token %}  
+        <label class="f1">Capture: 
+              <input type="file" name="image" accept="image/*" capture="user">
+            </label>
+          <br>
+          <br>
+          <button type="submit" class="btn btn-secondary btn-block">Submit</button>
+          </form>
+    </div>
+ </section>
+
+{% endblock %}

@@ -1,0 +1,1 @@
+web: gunicorn automatedatt.wsgi --log-file -

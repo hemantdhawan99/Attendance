@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section id="data-box" class="banner_main">
+    <div class="container">
+       <div class="row">
+          <div class="col-md-12">
+             <div class="text-bg10">
+                <figure><img src="{% static 'images/logo2bg.png' %}"/></figure>
+             </div>
+          </div>
+       </div>
+       <div class="f4" id="countdown2"><h1></h1></div>
+    </div>
+ </section>
+  <script>
+    window.setTimeout(function(){
+      window.location.href = "{% url 'Home' %}";
+    }, 3000);
+  </script>
+{% endblock %}
