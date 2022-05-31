@@ -1,5 +1,7 @@
 import numpy as np
 import os
+import matplotlib
+matplotlib.use('agg')
 import matplotlib.pyplot as plt
 from cv2 import cv2
 from sklearn.decomposition import PCA
