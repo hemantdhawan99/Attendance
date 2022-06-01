@@ -39,7 +39,7 @@ def Home(request):
     return render(request, 'pages/home.html')
 
 def TakeSnapshotAndSave(request):
-    try:
+    # try:
     # access the webcam (every webcam has a number, the default is 0)
         path ='Dataset/Images'
         cap = cv2.VideoCapture(0)
@@ -86,10 +86,10 @@ def TakeSnapshotAndSave(request):
         cap.release()
         cv2.destroyAllWindows()
         return capture(request)
-    except:
-        clear_dir()
-        messages.warning(request, 'Something went wrong, please try again.')
-        return render(request, 'pages/home.html')
+    # except:
+    #     clear_dir()
+    #     messages.warning(request, 'Something went wrong, please try again.')
+    #     return render(request, 'pages/home.html')
 
 
 def capture(request):
