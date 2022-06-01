@@ -18,7 +18,7 @@ def generate_image_encoding(path):
     
     image_dir_basepath = path
 
-    model_path = 'static/model/keras/model/facenet_keras.h5'
+    model_path = 'model/keras/model/facenet_keras.h5'
     model = tf.python.keras.models.load_model(model_path, compile=False)
 
     image_dirpath = image_dir_basepath
